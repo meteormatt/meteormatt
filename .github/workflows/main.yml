@@ -1,11 +1,24 @@
-name: Branch Merge
-uses: everlytic/branch-merge@1.1.5
-with:
-  # Token used to authenticate with GitHub when performing the merge command.
-  github_token: # default is ${{ github.token }}
-  # Branch name or Ref that you wish to merge into the target_branch.
-  source_ref: test
-  # Branch you are merging the source ref into.
-  target_branch: main
-  # Template to generate the commit message, see README.md for more info
-  commit_message_template: # optional, default is Merged {source_ref} into {target_branch}.
+jobs:
+  # This workflow contains a single job called "build"
+  build:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+    - name: Merge branch
+      # You may pin to the exact commit or the version.
+      # uses: devmasx/merge-branch@854d3ac71ed1e9deb668e0074781b81fdd6e771f
+      uses: devmasx/merge-branch@1.4.0
+      with:
+        # 
+        type: # optional, default is labeled
+        # PR Label name
+        label_name: # optional
+        # The name of target branch to merge
+        target_branch: 
+        # Alias head_to_merge input
+        from_branch: # optional
+        # The branch name or hash to merge. default GITHUB_SHA
+        head_to_merge: # optional
+        # Github token
+        github_token: 
