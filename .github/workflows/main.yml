@@ -30,7 +30,7 @@ jobs:
           # Token used to authenticate with GitHub when performing the merge command.
           github_token: ${{ github.token }}
           # Branch name or Ref that you wish to merge into the target_branch.
-          source_ref: ${{ github.ref }}
+          source_ref: main
           # Branch you are merging the source ref into.
           target_branch: test
           # Template to generate the commit message, see README.md for more info
