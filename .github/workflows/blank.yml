@@ -32,9 +32,9 @@ jobs:
           # PR Label name
           label_name: # optional
           # The name of target branch to merge
-          target_branch: 
+          target_branch: test
           # Alias head_to_merge input
-          from_branch: # optional
+          from_branch: main
           # The branch name or hash to merge. default GITHUB_SHA
           head_to_merge: # optional
           # Github token
