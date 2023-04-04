@@ -38,4 +38,4 @@ jobs:
           # The branch name or hash to merge. default GITHUB_SHA
           head_to_merge: # optional
           # Github token
-          github_token: 
+          github_token:  ${{ secrets.GITHUB_TOKEN }}
