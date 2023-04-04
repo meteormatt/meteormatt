@@ -1,0 +1,41 @@
+# This is a basic workflow to help you get started with Actions
+
+name: CI
+
+# Controls when the workflow will run
+on:
+  # Triggers the workflow on push or pull request events but only for the "main" branch
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  build:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      - name: Merge branch
+        # You may pin to the exact commit or the version.
+        # uses: devmasx/merge-branch@854d3ac71ed1e9deb668e0074781b81fdd6e771f
+        uses: devmasx/merge-branch@1.4.0
+        with:
+          # 
+          type: # optional, default is labeled
+          # PR Label name
+          label_name: # optional
+          # The name of target branch to merge
+          target_branch: 
+          # Alias head_to_merge input
+          from_branch: # optional
+          # The branch name or hash to merge. default GITHUB_SHA
+          head_to_merge: # optional
+          # Github token
+          github_token: 
